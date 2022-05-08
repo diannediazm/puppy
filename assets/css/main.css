@@ -1,9 +1,16 @@
 .jumbotron {
     margin-bottom: 30px;
+    margin-top: 80px;
 }
 footer {
     padding: 20px 20px 20px 20px;
     color: white;
     background-color: gray;
     margin-top: 30px;
+}
+.navbar {
+    padding: 10px
+}
+.space {
+    margin-top: 80px;
 }
