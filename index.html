@@ -96,11 +96,13 @@
     <div class="d-flex flex-wrap">
       <div class="card card-hotel d-flex flex-column justify-content-between">
         <div class="card-body">
-          <h5 class="card-title">Camas</h5>
+          <h5 class="card-title" data-bs-toggle="tooltip" data-bs-placement="top" title="Puedes llevar la de ella o él">Camas</h5>
           <img class="card-img-top" src="assets/img/canela4.jpg" alt="">
           <h6 class="card-subtitle">Personalizadas</h6>
           <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat non aspernatur eaque,
             corporis tempora quas sapiente.</p>
+            <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#contacto" style="position: absolute;
+            bottom: 42px;">Contacto</button>
         </div>
         <button type="button" class="btn btn-light btn-plus">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
       </div>
@@ -111,6 +113,8 @@
           <img class="card-img-top" src="assets/img/canela5.jpg" alt="">
           <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat non aspernatur eaque, corporis tempora quas
             sapiente.</p>
+            <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#contacto" style="position: absolute;
+            bottom: 42px;">Contacto</button>
         </div>
         <button type="button" class="btn btn-light btn-plus">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
       </div>
@@ -122,6 +126,8 @@
           <img class="card-img-top" src="assets/img/canela3.jpg" alt="">
           <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat non aspernatur eaque, corporis tempora quas
             sapiente.</p>
+            <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#contacto" style="position: absolute;
+            bottom: 42px;">Contacto</button>
           </div>
         <button type="button" class="btn btn-light btn-plus">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
       </div>
@@ -132,6 +138,8 @@
           <img class="card-img-top" src="assets/img/canela7.jpg" alt="">
           <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat non aspernatur eaque, corporis tempora quas
             sapiente.</p>
+            <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#contacto" style="position: absolute;
+            bottom: 42px;">Contacto</button>
         </div>
         <button type="button" class="btn btn-light btn-plus">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
       </div>
@@ -142,6 +150,8 @@
           <img class="card-img-top" src="assets/img/canela8.jpg" alt="">
           <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat non aspernatur eaque, corporis tempora quas
             sapiente.</p>
+            <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#contacto" style="position: absolute;
+            bottom: 42px;">Contacto</button>
         </div>
         <button type="button" class="btn btn-light btn-plus">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
       </div>
@@ -152,10 +162,36 @@
           <img class="card-img-top" src="assets/img/canela6.jpg" alt="">
           <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat non aspernatur eaque, corporis tempora quas
             sapiente.</p>
+            <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#contacto" style="position: absolute;
+            bottom: 42px;">Contacto</button>
         </div>
         <button type="button" class="btn btn-light btn-plus">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
       </div>
-      
+    </div>
+    <div class="modal fade" id="contacto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">¡Contáctanos!</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="recipient-name" class="col-form-label">Tu email:</label>
+                <input type="text" class="form-control" id="recipient-name">
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="col-form-label">Tu mensaje:</label>
+                <input type="text" class="form-control" id="message-text">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-success">Enviar</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <footer>
@@ -187,7 +223,11 @@
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/popper.js/dist/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+  <script>
+    $(function(){
+      $("[data-bs-toogle='tooltip']").tooltip();
+    });
+  </script>
 </body>
 
 </html>
