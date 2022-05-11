@@ -104,7 +104,7 @@
             <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#contacto" style="position: absolute;
             bottom: 42px;">Contacto</button>
         </div>
-        <button type="button" class="btn btn-light btn-plus">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
+        <button type="button" class="btn btn-light btn-plus" data-bs-toggle="popover" title="¡Te esperamos!" data-bs-content="And here's some amazing content. It's very engaging. Right?">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
       </div>
       <div class="card card-hotel d-flex flex-column justify-content-between">
         <div class="card-body">
@@ -116,7 +116,7 @@
             <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#contacto" style="position: absolute;
             bottom: 42px;">Contacto</button>
         </div>
-        <button type="button" class="btn btn-light btn-plus">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
+        <button type="button" class="btn btn-light btn-plus" data-bs-toggle="popover" title="¡Te esperamos!" data-bs-content="And here's some amazing content. It's very engaging. Right?">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
       </div>
     
       <div class="card card-hotel d-flex flex-column justify-content-between">
@@ -129,7 +129,7 @@
             <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#contacto" style="position: absolute;
             bottom: 42px;">Contacto</button>
           </div>
-        <button type="button" class="btn btn-light btn-plus">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
+        <button type="button" class="btn btn-light btn-plus" data-bs-toggle="popover" title="¡Te esperamos!" data-bs-content="And here's some amazing content. It's very engaging. Right?">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
       </div>
       <div class="card card-hotel d-flex flex-column justify-content-between">
         <div class="card-body">
@@ -141,7 +141,7 @@
             <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#contacto" style="position: absolute;
             bottom: 42px;">Contacto</button>
         </div>
-        <button type="button" class="btn btn-light btn-plus">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
+        <button type="button" class="btn btn-light btn-plus" data-bs-toggle="popover" title="¡Te esperamos!" data-bs-content="And here's some amazing content. It's very engaging. Right?">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
       </div>
       <div class="card card-hotel d-flex flex-column justify-content-between">
         <div class="card-body">
@@ -153,7 +153,7 @@
             <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#contacto" style="position: absolute;
             bottom: 42px;">Contacto</button>
         </div>
-        <button type="button" class="btn btn-light btn-plus">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
+        <button type="button" class="btn btn-light btn-plus" data-bs-toggle="popover" title="¡Te esperamos!" data-bs-content="And here's some amazing content. It's very engaging. Right?">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
       </div>
       <div class="card card-hotel d-flex flex-column justify-content-between">
         <div class="card-body">
@@ -165,7 +165,7 @@
             <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#contacto" style="position: absolute;
             bottom: 42px;">Contacto</button>
         </div>
-        <button type="button" class="btn btn-light btn-plus">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
+        <button type="button" class="btn btn-light btn-plus" data-bs-toggle="popover" title="¡Te esperamos!" data-bs-content="And here's some amazing content. It's very engaging. Right?">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
       </div>
     </div>
     <div class="modal fade" id="contacto" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -226,7 +226,9 @@
   <script>
     $(function(){
       $("[data-bs-toogle='tooltip']").tooltip();
+      $("[data-bs-toogle='popover']").popover();
     });
+    
   </script>
 </body>
 
