@@ -17,7 +17,7 @@
 <body>
   <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="./index.html">App Patitas</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
       aria-controls="navbarNavDropdowm" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -62,17 +62,33 @@
         <li class="breadcrumb-item active" aria-current="page">Home</li>
       </ol>
     </nav>
+    <p>
+      <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">¿Qué es lo mejor de esta APP?</a>
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">¿Cómo la consigo?</button>
+      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">¿Cuál es el costo?</button>
+    </p>
     <div class="row">
-      <div class="col-sm-4 text-center">
-        ¿Qué es lo mejor de esta APP?
+      <div class="col">
+        <div class="collapse multi-collapse" id="multiCollapseExample1">
+          <div class="card card-body">
+            ¿Qué es lo mejor de esta APP?
+          </div>
+        </div>
       </div>
-      <div class="col-sm-4 text-center">
-        ¿Cómo la consigo?
+      <div class="col">
+        <div class="collapse multi-collapse" id="multiCollapseExample2">
+          <div class="card card-body">
+            ¿Cómo la consigo?
+          </div>
+        </div>
       </div>
-      <div class="col-sm-4 text-center">
-        ¿Cuál es el costo?
+      <div class="col">
+        <div class="collapse multi-collapse" id="multiCollapseExample3">
+          <div class="card card-body">
+            ¿Cuál es el costo?
+          </div>
+        </div>
       </div>
-
     </div>
     <hr>
     <img src="assets/img/canela0.jpg" class="img-fluid" alt="responsive" style="width: 100%;margin-bottom: 20px;">
