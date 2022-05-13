@@ -8,7 +8,7 @@
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="node_modules/open-iconic/font/css/open-iconic-bootstrap.min.css">
 
   <title>Patitas de queso</title>
@@ -126,7 +126,7 @@
           <h6 class="card-subtitle">Personalizadas</h6>
           <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat non aspernatur eaque,
             corporis tempora quas sapiente.</p>
-            <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#contacto" style="position: absolute;
+            <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#contacto" id="contactoBTN" style="position: absolute;
             bottom: 42px;">Contacto</button>
         </div>
         <button type="button" class="btn btn-light btn-plus" data-bs-toggle="popover" title="¡Te esperamos!" data-bs-content="And here's some amazing content. It's very engaging. Right?">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
@@ -187,7 +187,7 @@
           <img class="card-img-top" src="assets/img/canela6.jpg" alt="">
           <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat non aspernatur eaque, corporis tempora quas
             sapiente.</p>
-            <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#contacto" style="position: absolute;
+            <button type="button" class="btn btn-outline-success btn-sm" data-bs-toggle="modal" data-bs-target="#contacto" id="#contacto" style="position: absolute;
             bottom: 42px;">Contacto</button>
         </div>
         <button type="button" class="btn btn-light btn-plus" data-bs-toggle="popover" title="¡Te esperamos!" data-bs-content="And here's some amazing content. It's very engaging. Right?">Saber más<span class="oi oi-plus footer-icon-button"></span></button>
@@ -246,14 +246,31 @@
 
 
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/popper.js/dist/popper.min.js"></script>
+  <script src="node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <script>
     $(function(){
-      $("[data-bs-toogle='tooltip']").tooltip();
-      $("[data-bs-toogle='popover']").popover();
-      $("['.carousel']").carousel();
-    });
+      $("[data-toggle='tooltip']").tooltip();
+      $("[data-toggle='popover']").popover();
+      $('#contacto').on('show.bs.modal', function (e) {
+      console.log('el modal se está mostrando');
+        $('#contactoBTN').removeClass('btn-outline-success');
+        $('#contactoBTN').addClass('btn-primary');
+        $('#contactoBTN').prop('disabled', true);
+      });
+      $('#contacto').on('shown.bs.modal', function (e) {
+      console.log('el modal se mostró');
+      });
+      $('#contacto').on('hide.bs.modal', function (e) {
+      console.log('el modal se está ocultando');
+      });
+      $('#contacto').on('hidden.bs.modal', function (e) {
+      console.log('el modal se ocultó');
+      $('#contactoBTN').prop('disabled', false);
+      $('#contactoBTN').removeClass('btn-primary');
+      $('#contactoBTN').addClass('btn-outline-success');
+      });
+  });
     
   </script>
 </body>
